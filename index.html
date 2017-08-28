@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8" />
+		<title>Index</title>
+	</head>
+	<body>
+		
+	</body>
+  <script>
+const ws = new WebSocket('ws://localhost:8000');
+window.ws = ws;
+
+ws.onerror = function (e) {
+  debugger;
+}
+
+ws.onopen = function (d) {
+  console.log('On Open');
+}
+
+ws.onclose = function (d) {
+  console.log('On Close');
+}
+  </script>
+</html>
